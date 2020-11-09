@@ -1,0 +1,1714 @@
+@import "normolize.css";
+
+body {
+    margin: 0;
+
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+
+    background-color: #fff;
+    z-index: auto;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+p {
+    margin: 0;
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+}
+
+.popup2 {
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+}
+
+
+.popup {
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+}
+
+.popup__body {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup__content {
+    background-color: #fff;
+    color: #000;
+    width: 100%;
+    max-width: 900px;
+    height: 100%;
+    min-height: 500px;
+
+    display: flex;
+
+    font-family: Georgia, sans-serif;
+}
+
+.popup__img {
+    width: 500px;
+}
+
+.popup__text {
+    width: 400px;
+}
+
+.pet__name {
+    margin: 50px 0 10px;
+    font-size: 35px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #000000;
+}
+
+.pet__types {
+    display: flex;
+
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+}
+
+.pet__description {
+    width: 350px;
+    margin: 40px 0;
+    font-size: 15px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+
+}
+.pet__condition {
+    font-size: 15px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    padding-left: 16px;
+}
+
+li {
+    color: #F1CDB3;
+}
+li span {
+    color: black;
+}
+
+.age,
+.inoculations,
+.diseases {
+    margin-bottom: 11px;
+}
+
+.popup__content {
+    position: relative;
+}
+
+.modal__button {
+    position: absolute;
+    top: -52px;
+    right: -38px;
+    border-radius: 100px;
+}
+
+.modal__button:hover {
+    background-color: #FDDCC4;
+    cursor: pointer;
+}
+
+/*Pets Hidden*/
+
+.sophia ,
+.timmy,
+.charly,
+.scarlett,
+.freddie {
+    display: none;
+}
+
+    /*Container
+    ========*/
+
+.shadow {
+    /*position: absolute;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*opacity: 0.6;*/
+    /*background: rgba(41, 41, 41, .6);*/
+    /*z-index: 1;*/
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+.header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+}
+
+.overflow {
+    overflow: hidden;
+}
+
+.header__inner {
+    height: 60px;
+    margin: 60px auto 0;
+    max-width: 1280px;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__title {
+    font-family: Georgia;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    color: #F1CDB3;
+}
+
+.header__subtitle {
+    font-family: Arial;
+    font-size: 13px;
+    line-height: 15px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+
+}
+
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.scroll__hidden {
+    overflow: hidden;
+    visibility: visible;
+}
+
+
+.submenu__block {
+    /*position: relative;*/
+    /*padding: 5px 5px 3px;*/
+    z-index: 9999;
+
+
+}
+
+.submenu {
+
+    visibility: hidden;
+    width: 320px;
+    height: 100vh;
+    background-image: url("../../assets/images/background.jpg");
+    position: absolute;
+    padding-top: 30px;
+    top: 0;
+    z-index: 999;
+
+    transition: all ease 0.3s;
+    right: -320px;
+}
+.submenu.show {
+    right: 0;
+    visibility: visible;
+}
+
+
+.burger__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.header__logo__burger {
+text-align: center;
+}
+
+.img__nav__burger {
+    width: 30px;
+    height: 30px;
+    margin-right: 53px;
+}
+
+.burger__nav {
+    margin-top: 158px;
+    text-align: center;
+}
+
+.burger__nav a {
+    display: block;
+    font-size: 32px;
+    line-height: 160%;
+    color: #FAFAFA;
+    margin-bottom: 40px;
+}
+
+.nav__link2.active {
+    position: relative;
+    color: #fff;
+}
+
+.nav__link2.active:after {
+    position: absolute;
+    left: 39px;
+    bottom: -3px;
+
+    content: "";
+    width: 243px;
+    /*width: 100%;*/
+    height: 3px;
+
+    background-color: #F1CDB3;
+}
+
+
+.img__nav{
+    display: none;
+    position: relative;
+}
+
+.nav__link {
+    margin-left: 35px;
+
+    text-decoration: none;
+    color: #CDCDCD;
+    font-size: 15px;
+    line-height: 160%;
+    font-family: Arial;
+    font-weight: 400;
+
+    transition: color .2s linear;
+
+}
+
+.nav__link:first-child {
+    margin: 0;
+}
+
+.nav__link:hover {
+    color: #FAFAFA;
+}
+
+.nav__link.active {
+    position: relative;
+    color: #fff;
+}
+
+.nav__link.active:after {
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+
+    content: "";
+    width: 100%;
+    height: 3px;
+
+    background-color: #F1CDB3;
+}
+
+
+/*intro
+======================*/
+
+
+
+
+.intro {
+    padding-top: 180px;
+
+    background: url("../../assets/images/start-screen-gradient-background.png") center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.intro__dog {
+    display: block;
+    height: 100%;
+    width: 100%;
+
+}
+
+
+
+.intro__content {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+    max-width: 1200px;
+}
+
+.content__block {
+    margin-top: 163px;
+    width: 100%;
+    max-width: 460px;
+}
+
+
+
+.content__block__title {
+    width: 100%;
+    max-width: 310px;
+    font-family: Georgia;
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 130%;
+
+    color: #FFFFFF;
+}
+
+.content__block__subtitle {
+    margin: 42px 0 56px;
+
+    font-family: Arial;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+
+    color: #CDCDCD;
+}
+
+.intro__btn {
+
+    padding: 16px 45px;
+    display: inline-block;
+    /*width: 100%;*/
+    /*max-width: 208px;*/
+
+    font-family: Georgia;
+    font-size: 17px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    color: #292929;
+    background-color: #F1CDB3;
+    border-radius: 100px;
+}
+
+.intro__btn:hover {
+    background: #FDDCC4;
+}
+
+.intro__btn:active {
+    background: #F1CDB3;
+}
+
+
+/*About the shelter “Cozy House”
+================*/
+.cozy__house {
+    height: 588px;
+}
+
+.cozy__house__content {
+    display: flex;
+
+    justify-content: center;
+    padding: 80px 0 100px;
+
+}
+
+.cozy__house__item {
+    width: 100%;
+    max-width: 430px;
+    margin: auto 0;
+}
+
+.cozy__house__item:first-child {
+    text-align: center;
+}
+
+.cozy__house__image {
+    margin-right: 120px;
+}
+
+.cozy__house__title {
+    max-width: 370px;
+    font-family: Georgia;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #545454;
+}
+
+.cozy__house__subtitle {
+    font-family: Arial;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+    color: #4C4C4C;
+}
+
+.cozy__house__subtitle:nth-child(2) {
+    margin: 25px 0;
+}
+
+
+/*Our friends*/
+
+.our__friends {
+    height: 877px;
+    background-color: #F6F6F6;
+}
+
+.our__friends__content {
+    padding: 80px 0 100px;
+    display: flex;
+    flex-direction: column;
+    /*text-align: center;*/
+    align-items: center;
+}
+
+.our__friends__item {
+    display: flex;
+    text-align: center;
+    margin-bottom: 60px;
+    align-items: center;
+    text-align: center;
+
+}
+
+.our__friends__item2 {
+    width: 100%;
+    max-width: 1200px;
+    justify-content: space-between;
+}
+
+.hidden {
+    display: none;
+}
+
+.our__friends__pets:hover {
+    background: #FFFFFF;
+}
+
+.our__friends__title {
+    /*width: 100%;*/
+    /*max-width: 401px;*/
+
+    font-family: Georgia;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #545454;
+    text-align: center;
+}
+
+.our__friends__pets {
+    height: 435px;
+    background-color: #FAFAFA;;
+
+}
+
+/*.our__friends__pets:nth-child(3) {*/
+/*    margin-left: 90px;*/
+/*}*/
+
+/*.our__friends__pets:nth-child(4) {*/
+/*    margin-left: 90px;*/
+/*}*/
+
+/*.our__friends__item:last-child {*/
+/*    margin: 0;*/
+/*}*/
+
+.pets__photo {
+    margin-bottom: 27px;
+    cursor: pointer;
+
+}
+
+.pets__name {
+    font-family: Georgia;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.06em;
+    color: #545454;
+
+    margin-bottom: 45px;
+}
+
+.pets__btn {
+    font-family: Georgia;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 130%;
+    color: #292929;
+    text-decoration: none;
+    letter-spacing: 0.06em;
+
+    padding: 15px 45px;
+
+    border: 2px solid #F1CDB3;
+    border-radius: 100px;
+
+}
+
+.pets__btn:hover {
+    background: #FDDCC4;
+}
+
+.our__friends__btn {
+    /*width: 2px;*/
+    font-family: Georgia;
+    font-weight: 400;
+    padding: 15px 45px;
+    font-size: 17px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #292929;
+    text-decoration: none;
+
+    background-color: #F1CDB3;
+    border-radius: 100px;
+
+}
+
+.our__friends__btn:hover {
+    background: #FDDCC4;
+}
+
+.our__friends__btn:active {
+    background: #F1CDB3;
+}
+
+.left__arrow {
+    margin-right: 53px;
+    border-radius: 50%;
+}
+
+.left__arrow:hover {
+    background-color: #FDDCC4;
+    cursor: pointer;
+}
+
+
+.right__arrow {
+    margin-left: 53px;
+    border-radius: 50%;
+}
+
+.right__arrow:hover {
+    background-color: #FDDCC4;
+    cursor: pointer;
+}
+
+
+/*can help
+=========*/
+
+.help__content {
+    display: flex;
+    flex-wrap: wrap;
+
+    /*text-align: center;*/
+
+
+    justify-content: center;
+
+
+}
+
+.help__content:first-child {
+    margin: 80px auto 60px;
+}
+
+.help__content:last-child {
+    margin: 0 auto 100px;
+    height: 281px;
+    width: 1200px;
+}
+
+.help__content__title {
+    width: 310px;
+    font-family: Georgia;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #545454;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.content__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /*width: 20%;*/
+    margin: 0 60px;
+    height: 113px;
+    margin-bottom: 58px;
+
+    align-items: center;
+}
+
+.content__item {
+
+}
+
+.content__img {
+    display: block;
+}
+
+.content__article {
+    font-family: Georgia;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: #545454;
+}
+
+
+/*Make donation
+=============*/
+
+.donation {
+    background: #F6F6F6;
+}
+
+.donation__content {
+    display: flex;
+    padding: 83px 0 100px;
+
+    align-items: center;
+    justify-content: center;
+
+}
+
+.donation__item:first-child {
+    margin-right: 15px;
+}
+
+.donation__item:last-child {
+    margin-left: 15px;
+}
+
+.donation__dog {
+    width: 100%;
+}
+
+.donation__title {
+    /*width: 300px;*/
+    /*margin-bottom: 20px;*/
+
+    font-family: Georgia;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #545454;
+}
+
+.donation__subtitle {
+    margin: 20px 0;
+
+    font-family: Georgia;
+    font-size: 15px;
+    line-height: 110%;
+    letter-spacing: 0.06em;
+    color: #545454;
+}
+
+.donation__card {
+    display: flex;
+    width: 350px;
+    margin-bottom: 20px;
+
+    background-color: #F1CDB3;
+    border-radius: 9px;
+}
+
+.donation__card:hover {
+    cursor: pointer;
+}
+
+.donation__card__img {
+    padding: 10px 15px;
+}
+
+.card__number {
+    padding: 10px 15px 10px 0;
+
+    font-family: Georgia;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: #545454;
+}
+
+.donation__article {
+    width: 380px;
+
+    font-family: Arial;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #B2B2B2;
+}
+
+/*footer
+==========*/
+
+.footer {
+
+    background: url("../../assets/images/footer-gradient-background2.jpg") center no-repeat;;
+    background-size: cover;
+
+}
+
+.footer__content {
+    padding: 40px 0 0;
+    display: flex;
+
+    justify-content: space-between;
+}
+
+.footer__contact {
+    height: 235px;
+    padding-top: 16px;
+    width: 280px;
+}
+
+
+.contact_title {
+    margin-bottom: 43px;
+
+    font-family: Georgia;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+}
+
+.contact_title {
+
+}
+
+.contact__mail_link {
+    display: flex;
+    margin-bottom: 43px;
+
+    text-decoration: none;
+    align-items: center;
+
+}
+
+.contact__mail__img {
+    margin-right: 20px;
+}
+
+.contact__mail {
+    font-family: Georgia;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: #F1CDB3;
+    text-decoration: none;
+}
+
+.contact__tel__link {
+    display: flex;
+    text-decoration: none;
+
+    align-items: center;
+}
+
+.contact__tel__img {
+    margin-right: 20px;
+}
+
+
+.contact__number {
+    font-family: Georgia;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+    color: #F1CDB3;
+}
+
+.footer__location {
+    padding-top: 16px;
+    width: 305px;
+}
+
+.location_title {
+    margin-bottom: 34px;
+
+    font-family: Georgia;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 130%;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+}
+
+.location__link {
+    display: flex;
+    margin-bottom: 32px;
+
+    text-decoration: none;
+    align-items: center;
+}
+
+
+
+@media (max-width: 1260px) {
+    .header__inner {
+        /*margin: 60px -30px 0;*/
+        padding: 0 30px;
+    }
+
+    .our__friends__pets:nth-child(4) {
+        display: none;
+    }
+
+}
+
+@media (max-width: 1260px) {
+
+    .help__content:last-child {
+        width: auto;
+        height: auto;
+    }
+    .content__item {
+        width: 25%;
+        margin: 10px;
+    }
+
+    .intro__content{
+        padding: 0 30px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .popup__img {
+        width: 350px;
+    }
+
+    .popup__text {
+        width: 280px;
+    }
+
+    .pet__name {
+        margin: 10px 0;
+        font-size: 35px;
+        line-height: 130%;
+        letter-spacing: 0.06em;
+        color: #000000;
+    }
+
+    .pet__types {
+        display: flex;
+
+        font-size: 20px;
+        line-height: 115%;
+        letter-spacing: 0.06em;
+    }
+
+    .pet__description {
+        width: 260px;
+        margin: 20px 0;
+        font-size: 13px;
+    }
+
+    .age,
+    .inoculations,
+    .diseases {
+        margin-bottom: 6px;
+    }
+
+    .popup__content {
+        width: 630px;
+        min-height: 350px;
+    }
+
+    .modal__button {
+        position: absolute;
+        top: -52px;
+        right: -38px;
+        border-radius: 100px;
+    }
+
+    .modal__button:hover {
+        background-color: #FDDCC4;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 900px) {
+    .header__inner {
+        margin-top: 30px;
+        padding: 0 30px;
+    }
+
+    .intro__content {
+        flex-direction: column;
+
+        justify-content: center;
+    }
+
+    .content__block {
+        margin: 0 auto;
+    }
+
+    .intro {
+        padding-top: 150px;
+        height: auto;
+    }
+
+    .intro__btn {
+        display: block;
+        /*width: 100%;*/
+        /*max-width: 215px;*/
+        width: 215px;
+
+        margin: 0 auto;
+    }
+
+    .content__block__subtitle {
+        margin-bottom: 42px;
+    }
+
+    .content__block {
+        margin-bottom: 98px;
+    }
+
+    .intro__dog {
+        display: block;
+        width: 569px;
+    }
+}
+
+@media (max-width: 920px) {
+    .footer__content {
+        flex-wrap: wrap;
+        padding-top: 30px;
+    }
+
+    .footer__item {
+        width: 50%;
+    }
+
+    .footer__dog {
+        display: block;
+        margin: 0 auto;
+        width: 300px;
+        padding-top: 33px;
+    }
+
+    .footer__contact {
+        /*width: 280px;*/
+        padding: 0 0 0 64px;
+    }
+
+    .contact_title {
+        width: 280px;
+    }
+
+    .footer__location {
+        padding: 0 0 0 20px;
+    }
+
+    .location_title {
+        width: 305px;
+    }
+
+    .location__link {
+        width: 305px;
+    }
+
+    .intro__picture{
+
+        text-align: right;
+        align-items: end;
+
+    }
+    .intro__dog{
+        display: block;
+        width: 100%;
+        margin: 0 30px 0 0;
+        max-width: 569px;
+        justify-content: right;
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 870px) {
+    .our__friends__item {
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+    .our__friends__pets:nth-child(4) {
+        display: none;
+    }
+
+    .our__friends__pets:nth-child(3) {
+        margin: 0 0 0 20px;
+    }
+
+    .our__friends__pets:nth-child(2) {
+        margin: 0 20px 0 0;
+    }
+
+    .left__arrow {
+        display: block;
+        margin: 0 12px 0 0;
+    }
+
+    .right__arrow {
+        display: block;
+        margin: 0 0 0 12px;
+    }
+}
+
+
+
+@media (max-width: 769px) {
+
+
+
+
+
+    /*Cozyhouse
+    =============================*/
+    .cozy__house {
+        height: auto;
+    }
+
+    .cozy__house__content {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .cozy__house__item {
+        margin: 0 0 80px;
+    }
+
+    .cozy__house__image {
+        margin: 0;
+    }
+
+
+    /*Can help
+    ============*/
+
+    .content__item {
+        width: 33%;
+        margin: 0;
+    }
+
+
+    .help__content:last-child {
+        width: auto;
+        padding: 0 35px;
+        margin-bottom: 45px;
+        height: 505px;
+        /*margin: 0;*/
+    }
+
+
+    /*Donation
+    ============*/
+
+    .donation__content {
+        flex-direction: column-reverse;
+        padding: 80px 0 97px;
+    }
+
+    .donation__item:first-child {
+        margin: 0;
+    }
+
+    .donation__item:last-child {
+        margin: 0;
+        padding-bottom: 60px;
+    }
+
+
+    /*Footer
+    =========*/
+
+}
+
+@media (max-width: 730px) {
+    .popup__img {
+        width: 0px;
+    }
+
+    .popup__text {
+        width: 240px;
+    }
+
+    .pet__name {
+text-align: center;
+    }
+
+    .pet__types {
+        justify-content: center
+    }
+    .pet__description {
+        width: 220px;
+    }
+
+     .popup__content {
+        width: 240px;
+        min-height: 341px;
+        padding: 0 10px;
+    }
+
+
+}
+
+@media (max-width: 720px) {
+    .nav__link{
+        margin-left: 9px;
+    }
+
+        .our__friends__pets:nth-child(3) {
+            display: none;
+        }
+    .our__friends__pets:nth-child(2) {
+        margin: 0;
+    }
+
+}
+
+@media (max-width: 700px){
+    /*Footer
+   ===========*/
+    .footer__item {
+        width: 100%;
+        padding: 0;
+        margin: 0 auto 13px;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+
+    }
+
+    .footer__item:last-child {
+        margin-bottom: 0;
+    }
+
+    .contact_title {
+        width: 280px;
+        margin: 0 auto 43px;
+
+        font-size: 25px;
+    }
+
+    .contact__mail_link {
+        justify-content: center;
+    }
+    .contact__tel__link {
+        justify-content: center;
+    }
+
+    .location_title {
+        width: 270px;
+        margin: 0 auto 40px;
+
+        font-size: 25px;
+    }
+
+    .location__link {
+        margin: 0 auto 40px;
+    }
+
+
+    .contact__mail {
+        text-align: left;
+    }
+
+    .footer__dog {
+        max-width: 260px;
+    }
+
+    .location__link:last-child {
+        margin-bottom: 27px;
+    }
+
+}
+
+@media (max-width: 666px) {
+    .header__inner {
+        padding: 0 53px 0 10px;
+    }
+
+    .header__title {
+        font-size: 32px;
+    }
+
+    .nav__link {
+        display: none;
+    }
+
+    .img__nav{
+        display: block;
+        position: relative;
+    }
+
+
+
+
+    /*}*/
+
+    .nav__link2 {
+        text-decoration: none;
+        /*display: inline-block;*/
+        /*width: 150px;*/
+        padding: 3px 10px;
+
+        /*font-family: Georgia;*/
+        font-weight: 400;
+        /*font-size: 13px;*/
+        /*line-height: 15px;*/
+        /*letter-spacing: 0.1em;*/
+        /*color: white;*/
+    }
+
+}
+
+@media (max-width: 575px) {
+    .help__content {
+        justify-content: inherit;
+    }
+
+    .help__content__title {
+        font-size: 25px;
+        margin: 0 auto;
+    }
+
+    .help__content:first-child {
+        margin: 42px 0;
+    }
+
+    .help__content:last-child {
+        padding: 0;
+        margin: 0 0 12px;
+        height: auto;
+    }
+
+    .content__item {
+        width: 50%;
+        height: 87px;
+        margin-bottom: 30px;
+    }
+
+    .content__img {
+        height: 56%;
+    }
+
+    .content__article {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .intro__content{
+        text-align: center;
+    }
+
+    .intro__btn {
+        display: block;
+        width: 230px;
+    }
+
+    .content__block {
+        margin-bottom: 104px;
+    }
+
+
+    .content__block__title {
+        font-size: 40px;
+        text-align: center;
+        letter-spacing: 0.06em;
+        max-width: inherit;
+
+    }
+
+    .content__block__subtitle {
+        margin: 42px auto 41Px;
+        padding: 0 10px;
+        width: auto;
+        text-align: center;
+    }
+
+    .intro__dog {
+        max-width: 260px;
+    }
+
+}
+
+@media (max-width: 460px) {
+    .cozy__house__item {
+        padding: 0 25px;
+    }
+
+    .donation__content {
+        padding: 42px 0;
+    }
+
+    .donation__item:last-child {
+        align-items: center;
+        margin: 0 auto;
+        padding-bottom: 42px;
+        text-align: center;
+    }
+
+    .donation__title {
+        /*font-size: 25px;*/
+    }
+
+    .donation__subtitle {
+        line-height: 160%;
+        letter-spacing: inherit;
+    }
+
+    .donation__card {
+        width: 281px;
+        margin: 0 auto 20px;
+        align-items: center;
+
+    }
+
+    .card__number {
+        font-size: 15px;
+        line-height: 110%;
+    }
+
+    .donation__article {
+        width: 280px;
+        text-align: justify;
+        margin: 0 auto;
+    }
+
+    .donation__dog {
+        display: block;
+        max-width: 380px;
+    }
+}
+
+
+@media (max-width: 430px) {
+    .our__friends {
+        height: 791px;
+    }
+
+    .our__friends__content {
+        padding: 0px;
+    }
+
+    .our__friends__title {
+        font-size: 25px;
+    }
+
+    .our__friends__item {
+        position: relative;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 114px;
+    }
+
+    .our__friends__item:first-child {
+        margin: 42px 0;
+    }
+
+    .our__friends__pets:nth-child(2) {
+        margin: 0;
+    }
+
+    .left__arrow {
+        margin: 0;
+        position: absolute;
+        bottom: -72px;
+        left: 43px;
+    }
+
+    .right__arrow {
+        margin: 0;
+        position: absolute;
+        bottom: -72px;
+        right: 43px;
+    }
+
+
+
+}
+
+@media (max-width: 320px) {
+
+
+    .content__block {
+        margin-bottom: 104px;
+    }
+
+    .content__block__title {
+        font-size: 25px;
+        text-align: center;
+        letter-spacing: 0.06em;
+        max-width: inherit;
+
+    }
+
+    .content__block__subtitle {
+        margin: 42px auto 41Px;
+        padding: 0;
+        width: 300px;
+        text-align: center;
+    }
+
+    .intro__dog {
+        width: 260px;
+        margin-left: 50px;
+    }
+
+
+    /*Cozy house
+    ======*/
+    .cozy__house__content {
+        padding: 42px 0;
+    }
+
+    .cozy__house__title {
+        font-size: 25px;
+    }
+
+    .cozy__house__subtitle {
+        text-align: justify;
+    }
+
+    .cozy__house__item {
+        text-align: center;
+        padding: 0 25px;
+        margin-bottom: 42px;
+    }
+
+    .cozy__house__subtitle:nth-child(2) {
+        margin: 25px 0 22px;
+    }
+
+    .cozy__house__image {
+        width: 260px;
+    }
+
+
+    /*Our friends
+    ===========*/
+
+
+    /*.our__friends__pets:nth-child(3) {*/
+    /*    display: none;*/
+    /*}*/
+
+    /*.our__friends__pets:nth-child(2){*/
+    /*    display: none;*/
+    /*}*/
+    .our__friends__item {
+        position: relative;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 114px;
+    }
+
+    .our__friends__item:first-child {
+        margin: 42px 0;
+    }
+
+    .our__friends__pets:nth-child(2) {
+        margin: 0;
+    }
+
+
+
+    /*Can help
+    =========*/
+    .help__content {
+        justify-content: inherit;
+    }
+
+    .help__content__title {
+        font-size: 25px;
+        margin: 0 auto;
+    }
+
+    .help__content:first-child {
+        margin: 42px 0;
+    }
+
+    .help__content:last-child {
+        padding: 0;
+        margin: 0 0 12px;
+        height: auto;
+    }
+
+    .content__item {
+        width: 50%;
+        height: 87px;
+        margin-bottom: 30px;
+    }
+
+    .content__img {
+        height: 56%;
+    }
+
+    .content__article {
+        font-size: 15px;
+    }
+
+
+    /*Make donation
+    ========*/
+
+    /*.cozy__house__item {*/
+    /*    padding: 0;*/
+    /*}*/
+
+
+    /*.donation__content {*/
+    /*    padding: 42px 0;*/
+    /*}*/
+
+    /*.donation__item:last-child {*/
+    /*    align-items: center;*/
+    /*    margin: 0 auto;*/
+    /*    padding-bottom: 42px;*/
+    /*    text-align: center;*/
+    /*}*/
+
+    .donation__title {
+        font-size: 25px;
+    }
+
+    /*.donation__subtitle {*/
+    /*    line-height: 160%;*/
+    /*    letter-spacing: inherit;*/
+    /*}*/
+
+    /*.donation__card {*/
+    /*    width: 281px;*/
+    /*    margin: 0 auto 20px;*/
+    /*    align-items: center;*/
+
+    /*}*/
+
+    /*.card__number {*/
+    /*    font-size: 15px;*/
+    /*    line-height: 110%;*/
+    /*}*/
+
+    /*.donation__article {*/
+    /*    width: 280px;*/
+    /*    text-align: justify;*/
+    /*    margin: 0 auto;*/
+    /*}*/
+
+    .donation__dog {
+        display: block;
+        width: 260px;
+    }
+
+
+    /*!*Footer*/
+    /*===========*!*/
+    /*.footer__item {*/
+    /*    width: 100%;*/
+    /*    padding: 0;*/
+    /*    margin: 0 auto 13px;*/
+    /*    align-items: center;*/
+    /*    text-align: center;*/
+    /*    justify-content: center;*/
+
+    /*}*/
+
+    /*.contact_title {*/
+    /*    width: 280px;*/
+    /*    margin: 0 auto 43px;*/
+
+    /*    font-size: 25px;*/
+    /*}*/
+
+    /*.contact__mail_link {*/
+    /*    justify-content: center;*/
+    /*}*/
+    /*.contact__tel__link {*/
+    /*    justify-content: center;*/
+    /*}*/
+
+    /*.location_title {*/
+    /*    width: 270px;*/
+    /*    margin: 0 auto 40px;*/
+
+    /*    font-size: 25px;*/
+    /*}*/
+
+    /*.location__link {*/
+    /*    margin: 0 auto 40px;*/
+    /*}*/
+
+
+    /*.contact__mail {*/
+    /*    text-align: left;*/
+    /*}*/
+
+    /*.footer__dog {*/
+    /*    max-width: 260px;*/
+    /*}*/
+
+    /*.location__link:last-child {*/
+    /*    margin-bottom: 27px;*/
+    /*}*/
+
+}
+
